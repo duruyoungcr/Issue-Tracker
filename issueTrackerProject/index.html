@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSW0lkH1kuBaBoutbn7S5HxannJXtwXOusM6cAS938ILcH4sf3E"
+      class="icon"
+    />
+    <title>Issue Tracker</title>
+  </head>
+  <body onload="fetchIssues()">
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">Issue Tracker</h1>
+      </div>
+      <div class="jumbotron">
+        <h3>Create a new case:</h3>
+        <form id="issueInputForm">
+          <div class="form-group">
+            <label for="issueTypeInput">Issue Type</label>
+            <select id="issueTypeInput" class="form-control">
+              <option disabled value="select" selected>Select</option>
+              <option value="Type - 1">T y p e - 1</option>
+              <option value="Type - 2">T y p e - 2</option>
+              <option value="Type - 3">T y p e - 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="issueDescInput">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="issueDescInput"
+              placeholder="Describe the issue..."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="issueSeverityInput">Severity</label>
+            <select id="issueSeverityInput" class="form-control">
+              <option disabled value="select" selected>Select</option>
+              <option value="low">L o w</option>
+              <option value="medium">M e d i u m</option>
+              <option value="high">H i g h</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="issueAssignInput">Assign To</label>
+            <select id="issueAssignInput" class="form-control">
+              <option disabled value="select" selected>Select</option>
+              <option value="person - 1">P e r s o n - 1</option>
+              <option value="person - 2">P e r s o n - 2</option>
+              <option value="person - 3">P e r s o n - 3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary">
+            S a v e
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-12">
+        <div id="issuesList"></div>
+      </div>
+    </div>
+    <div class="container">
+      <hr />
+      <footer class="text-center">
+        Made with <i class="fa fa-heart"></i> by
+        <a href="http://codepen.io/smartay" target="_blank">ray</a>
+      </footer>
+    </div>
+    <script src="https://chancejs.com/chance.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

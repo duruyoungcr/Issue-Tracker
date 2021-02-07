@@ -1,2 +1,2 @@
 # Issue-Tracker
-a simple issue tracker app
+A simple issue tracker app
